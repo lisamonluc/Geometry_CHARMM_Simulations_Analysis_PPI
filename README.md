@@ -23,6 +23,7 @@
 
 # Restarts are expected to be nested under the main folder, e.g.: `hosts/<host>/<system>/<restart1>/<restart2>/<restart3>/`
 
+""" 
 # Recommended run order:
 # 1. Merge restart outputs:
 # - python merge_restarts.py hosts/<host>/<system>/<restart1>/
@@ -44,4 +45,5 @@
 # - python process_distance_data.py /path/to/minima_data_folder 1
 
 # 7. Contact behavior plots (pick all sites or one site at a time):
-# - python geometry_analysis_all_sites.py or single-site: python geometry_analysis.py
+# - python geometry_analysis_all_sites.py or single-site: python geometry_analysis.py 
+"""
