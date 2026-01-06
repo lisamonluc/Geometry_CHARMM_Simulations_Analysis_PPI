@@ -21,27 +21,28 @@
 # - `*.dcd`
 # - a structure/topology file: `*.psf` or `*.pdb`
 
-# Restarts are expected to be nested under the main folder, e.g.: `hosts/<host>/<system>/<restart1>/<restart2>/<restart3>/`
+# Restarts are expected to be nested under the main folder, e.g.: `hosts/<host>/<system>/<restart1>/<restart2>/<restart3>/` This should be the paths called for steps 1-5.
+# Place all scripts under working directory and create "hosts" directory within working directory
 
 # Recommended run order:
 # 1. Merge restart outputs:
-# - python merge_restarts.py hosts/<host>/<system>/<restart1>/
-# - python process_geo.py hosts/<host>/<system>/<restart1>/
+# - python merge_restarts.py <path>
+# - python process_geo.py <path>
 
 # 2. Convert λ to RMSD values and make Free Energy Landscape versus RMSD plots:
-# - python rmsd_values.py hosts/<host>/<system>/<restart1>/
+# - python rmsd_values.py <path>
 
 # 3. Find frame numbers within energy minima:
-# - python find_frames.py hosts/<host>/<system>/<restart1>/
+# - python find_frames.py <path>
   
 # 4. Plot RMSD versus frame (optional):
-# - python rmsd_vs_frame.py hosts/<host>/<system>/<restart1>/
+# - python rmsd_vs_frame.py <path>
   
 # 5. Extract minima trajectories and run bond analysis:
-# - python dcd_analysis.py hosts/<host>/<system>/<restart1>/
+# - python dcd_analysis.py <path>
   
 # 6. After VMD distance extraction of bonds, convert distance text files to CSV and make distance-vs-frame plots:
-# - python process_distance_data.py /path/to/minima_data_folder 1
+# - python process_distance_data.py </path/to/minima_data_folder_1>
 
 # 7. Contact behavior plots (pick all sites or one site at a time):
 # - python geometry_analysis_all_sites.py or single-site: python geometry_analysis.py 
