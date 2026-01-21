@@ -29,7 +29,7 @@
 # - python merge_restarts.py </path/to/trajectory_files>
 # - python process_geo.py </path/to/trajectory_files>
 
-# 2. Convert λ to RMSD values and make Free Energy Landscape versus RMSD plots:
+# 2. Make sure to adjust slope value in script, convert λ to RMSD values and make Free Energy Landscape versus RMSD plots:
 # - python rmsd_values.py </path/to/trajectory_files>
 
 # 3. Find frame numbers within energy minima:
