@@ -29,16 +29,16 @@
 # - python merge_restarts.py </path/to/trajectory_files>
 # - python process_geo.py </path/to/trajectory_files>
 
-# 2. Make sure to adjust slope value in script, convert λ to RMSD values and make Free Energy Landscape versus RMSD plots:
+# 2. Make sure to adjust slope value in script, convert λ to RMSD values and make Free Energy Landscape versus RMSD plots and use google-chrome to look at html file to find RMSD range of minima:
 # - python rmsd_values.py </path/to/trajectory_files>
 
-# 3. Find frame numbers within energy minima:
+# 3. Find frame numbers within energy minima using script, and makes necessary csv and parquet files for step 5:
 # - python find_frames.py </path/to/trajectory_files>
   
 # 4. Plot RMSD versus frame (optional):
 # - python rmsd_vs_frame.py </path/to/trajectory_files>
   
-# 5. Extract minima trajectories and run bond analysis:
+# 5. Input in desire RMSD range of minima and extract minima trajectories and run bond analysis:
 # - python dcd_analysis.py </path/to/trajectory_files>
   
 # 6. After VMD distance extraction of bonds, convert distance text files to CSV and make distance-vs-frame plots:
